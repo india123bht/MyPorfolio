@@ -113,3 +113,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburgerBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+
+    // Fermer menu au clic sur un lien
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+        });
+    });
+});
