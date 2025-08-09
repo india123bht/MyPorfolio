@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Ton CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Ton JS (defer pour garantir DOM ready) -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">INDIA</div>
+      <div class="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT ME</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      <!-- Ajout de l'id pour JS -->
+      <button id="letsTalkBtn" class="lets-talk">LET'S TALK</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h3>INDIA BAHATI PIERRE</h3>
+        <h1>HEY! I'M INDIA</h1>
+        <h2>I'M A DEVELOPER</h2>
+        <p>
+          We lead you for targeting experience responsive marketing, first
+          thoughts at exercise blessing, live-ignore may everything joy
+          situation backwoods the adjustment.
+        </p>
+        <div class="hero-buttons">
+          <!-- Ajout de l'id pour JS -->
+          <button id="getInTouchBtn" class="primary-btn">GET IN TOUCH</button>
+          <div class="social-links">
+            
+            <a href="https://facebook.com/indiaBht" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://instagram.com/indiabht" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://wa.me/243979857462" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://github.com/india123bht" target="_blank"><i class="fa-brands fa-github"></i></a>
+<a href="https://m.me/indiaBht" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-container">
+          <img src="india.jpg" alt="Profile" class="profile-pic" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="section-content">
+        <h3>ABOUT ME</h3>
+        <h2>Who I Am</h2>
+        <p>
+          I'm a passionate designer with a keen eye for detail and a love for
+          creating beautiful, functional designs. With years of experience in
+          the industry, I've developed a strong understanding of user-centered
+          design principles.
+        </p>
+        <div class="skills">
+          <div class="skill-item">
+            <h4>UI Design</h4>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <h4>Web Design</h4>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <h4>Branding</h4>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-image">
+        <div class="image-container">
+         
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <h3>MY WORK</h3>
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-image">
+           
+          </div>
+          <h4>Brand Identity</h4>
+          <p>Modern branding solution for tech startup</p>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+           
+          </div>
+          <h4>Web Developer</h4>
+          <p>E-commerce platform redesign</p>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            
+          </div>
+          <h4>UI/UX Design</h4>
+          <p>Mobile app interface design</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+      <h3>WHAT I OFFER</h3>
+      <h2>My Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h4>UI/UX Design</h4>
+          <p>Creating intuitive and engaging user experiences for web and mobile applications.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h4>Web Design</h4>
+          <p>Designing modern and responsive websites that capture your brand's essence.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h4>Brand Identity</h4>
+          <p>Developing unique and memorable brand identities that stand out in the market.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="section-content">
+        <h3>GET IN TOUCH</h3>
+        <h2>Let's Work Together</h2>
+        <p>Have a project in mind? Let's create something amazing together.</p>
+
+        <form class="contact-form" id="contact-form">
+          <input type="text" name="user_name" placeholder="Your Name" required />
+          <input type="email" name="user_email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="primary-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="logo">INDIA</div>
+          <p>Creating beautiful digital experiences with passion and purpose.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/indiabht" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/indiaBht" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/243979857462" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://github.com/india123bht" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://m.me/indiaBht" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <nav class="footer-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>📧 indiapierre868@gmail.com</p>
+          <p>📱 +243 979 857 462</p>
+          <p>📍 Goma , DRC</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 india-bht. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
